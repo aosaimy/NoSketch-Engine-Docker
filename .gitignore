@@ -24,3 +24,4 @@ examples/webcorpus_ske
 
 # PyCharm
 .idea/
+.DS_Store
