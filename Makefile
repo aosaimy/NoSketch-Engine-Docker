@@ -48,7 +48,6 @@ remove-cert:
 run:
 	@make -s stop
 	docker run -d --rm --name $(CONTAINER_NAME) -p$(PORT):80 --mount type=bind,src=$(CORPORA_DIR),dst=/corpora \
-     -e HTACCESS="$(HTACCESS)" -e HTPASSWD="$(HTPASSWD)" \
      -e SERVER_NAME="$(SERVER_NAME)" -e SERVER_ALIAS="$(SERVER_ALIAS)" -e CITATION_LINK="$(CITATION_LINK)" \
      $(IMAGE_NAME):latest
 	@echo 'URL: http://localhost:$(PORT)/'
